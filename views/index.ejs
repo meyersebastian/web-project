@@ -1,0 +1,48 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script defer src="/js/main.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <% if (username) { %>
+                <li><a href="/">Home</a></li>
+                <li><a href="/auth/logout">Log Out</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/tetris">Tetris</a></li>
+                <% } else{ %>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/auth/register">Register</a></li>
+                    <li><a href="/auth/login">Log In</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/tetris">Tetris</a></li>
+                    <% } %>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <% if (username) { %>
+                <span>Welcome, <%= username %>!</span>
+            <% } %>
+        </div>
+        <h1>Welcome to My Website</h1>
+    </header>
+    <main>
+        <section class="main-content">
+            <img src="/img/placeholder.jpg" alt="Placeholder Image">
+            <p>This is a short description below the image.</p>
+        </section>
+        <section class="api-content">
+            <input type="text" id="user-name" placeholder="Enter user name">
+            <button id="fetch-data">Fetch Data</button>
+            <div id="data-results"></div>
+        </section>
+    </main>
+</body>
+</html>

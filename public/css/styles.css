@@ -1,0 +1,71 @@
+/* public/css/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: beige;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    position: absolute;
+    top: 5px;
+    left: 550px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.main-content {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.main-content img {
+    max-width: 80%;
+    height: auto;
+}
+.sidebar {
+    margin-left: 20px;
+    text-align: center;
+}
+canvas {
+    display: left;
+    justify-content: center;
+    align-items: center;
+}
+
+#tetris-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 60px;
+}
+
+.user-info {
+    position: absolute;
+    top: 5px;
+    left: 100px;
+}
+
+h1 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    }
+
+form {
+    margin-left: 60px;
+    }
