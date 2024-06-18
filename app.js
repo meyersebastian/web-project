@@ -28,6 +28,17 @@ app.use(session({
 
 // Your existing routes and middleware
 
+const indexRouter = require('./routes/index');
+const aboutRouter = require('./routes/about');
+const authRouter = require('./routes/auth')(users);
+const tetrisRouter = require('./routes/tetris');  // Add this line
+
+app.use('/', indexRouter);
+app.use('/about', aboutRouter);
+app.use('/auth', authRouter);
+app.use('/tetris', tetrisRouter);  // Add this line
+
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
